@@ -1,1 +1,10 @@
 greeting: user
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${EUREKA_HOST}:8761/eureka/
+  instance:
+    hostname: ${EUREKA_HOST}
