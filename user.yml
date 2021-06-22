@@ -15,6 +15,17 @@ spring:
       uri: ${MONGO_URI}
       repositories:
         enabled: true
+  cloud:
+    stream:
+      function:
+        defination: authentication
+      bindings:
+        authentication-out-0:
+          destination: authentication
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
 
 management:
   endpoints:
