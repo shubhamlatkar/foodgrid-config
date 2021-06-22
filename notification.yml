@@ -18,7 +18,7 @@ spring:
       function:
         defination: authentication
       bindings:
-        authentication-out-0:
+        authentication-in-0:
           destination: authentication
       kafka:
         binder:
