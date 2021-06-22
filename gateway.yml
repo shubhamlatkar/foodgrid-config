@@ -17,6 +17,18 @@ spring:
           uri: lb://notification
           predicates:
             - Path=/notification/**
+        - id: order
+          uri: lb://order
+          predicates:
+            - Path=/order/**
+        - id: delivery
+          uri: lb://delivery
+          predicates:
+            - Path=/delivery/**
+        - id: account
+          uri: lb://account
+          predicates:
+            - Path=/account/**
 
 eureka:
   client:
