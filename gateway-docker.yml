@@ -47,11 +47,6 @@ spring:
             - Path=/frontend/**
           filters:
             - StripPrefix=1
-        - id: static
-          uri: http://frontend:8090
-          predicates:
-            - Path=/js/**
-            - Path=/css/**
 
 eureka:
   client:
