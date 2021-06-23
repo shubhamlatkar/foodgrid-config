@@ -35,6 +35,11 @@ spring:
             - Path=/frontend/**
           filters:
             - StripPrefix=1
+        - id: static
+          uri: lb://frontend
+          predicates:
+            - Path=/js/**
+            - Path=/css/**
 
 eureka:
   client:
