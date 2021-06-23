@@ -41,6 +41,12 @@ spring:
             - Path=/api/v1/account/**
           filters:
             - StripPrefix=2
+        - id: frontend
+          uri: http://frontend:8090
+          predicates:
+            - Path=/frontend/**
+          filters:
+            - StripPrefix=1
 
 eureka:
   client:

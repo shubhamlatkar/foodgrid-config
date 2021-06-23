@@ -29,6 +29,12 @@ spring:
           uri: lb://account
           predicates:
             - Path=/account/**
+        - id: frontend
+          uri: lb://frontend
+          predicates:
+            - Path=/frontend/**
+          filters:
+            - StripPrefix=1
 
 eureka:
   client:
