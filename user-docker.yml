@@ -8,6 +8,11 @@ eureka:
     hostname: eureka
 
 spring:
+  data:
+    mongodb:
+      uri: mongodb://database:27017/foodgrid-user
+      repositories:
+        enabled: true
   cloud:
     stream:
       function:

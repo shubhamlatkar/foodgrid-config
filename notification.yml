@@ -10,7 +10,7 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: ${MONGO_URI}
+      uri: ${MONGO_URI:mongodb://localhost:27017/foodgrid-notification}
       repositories:
         enabled: true
   cloud:
