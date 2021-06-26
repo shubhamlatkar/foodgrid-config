@@ -10,31 +10,31 @@ spring:
           predicates:
             - Path=/api/v1/user/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=3
         - id: restaurant
           uri: http://restaurant:8082
           predicates:
             - Path=/api/v1/restaurant/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=3
         - id: notification
           uri: http://notification:8083
           predicates:
             - Path=/api/v1/notification/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=3
         - id: order
           uri: http://order:8084
           predicates:
             - Path=/api/v1/order/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=3
         - id: delivery
           uri: http://delivery:8085
           predicates:
             - Path=/api/v1/delivery/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=3
         - id: account
           uri: http://account:8086
           predicates:
