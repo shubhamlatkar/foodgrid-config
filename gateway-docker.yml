@@ -22,7 +22,7 @@ spring:
           predicates:
             - Path=/api/v1/notification/**
           filters:
-            - StripPrefix=3
+            - StripPrefix=2
         - id: order
           uri: http://order:8084
           predicates:
