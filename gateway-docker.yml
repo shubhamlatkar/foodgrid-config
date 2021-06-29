@@ -1,6 +1,11 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
       httpclient:
         connect-timeout: 20000
         response-timeout: 50000
