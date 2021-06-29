@@ -5,7 +5,9 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedMethods: "*"
+            allowedMethods:
+              - GET
+              - POST
       httpclient:
         connect-timeout: 20000
         response-timeout: 50000
