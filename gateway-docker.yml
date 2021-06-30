@@ -2,13 +2,7 @@ spring:
   cloud:
     gateway:
       default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods: "*"
-            allowedHeaders: "*"
+        - RemoveRequestHeader=Cookie
       httpclient:
         connect-timeout: 20000
         response-timeout: 50000
@@ -25,12 +19,14 @@ spring:
             - Path=/api/v1/restaurant/**
           filters:
             - StripPrefix=3
+            - RemoveRequestHeader=Cookie
         - id: notification
           uri: http://notification:8083
           predicates:
             - Path=/api/v1/notification/**
           filters:
             - StripPrefix=3
+            - RemoveRequestHeader=Cookie
         - id: order
           uri: http://order:8084
           predicates:
