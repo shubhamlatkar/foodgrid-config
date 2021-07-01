@@ -8,45 +8,45 @@ spring:
         response-timeout: 50000
       routes:
         - id: user
-          uri: http://user:8081
+          uri: lb://user
           predicates:
             - Path=/api/v1/user/**
           filters:
             - StripPrefix=3
         - id: restaurant
-          uri: http://restaurant:8082
+          uri: lb://restaurant
           predicates:
             - Path=/api/v1/restaurant/**
           filters:
             - StripPrefix=3
             - RemoveRequestHeader=Cookie
         - id: notification
-          uri: http://notification:8083
+          uri: lb://notification
           predicates:
             - Path=/api/v1/notification/**
           filters:
             - StripPrefix=3
             - RemoveRequestHeader=Cookie
         - id: order
-          uri: http://order:8084
+          uri: lb://order
           predicates:
             - Path=/api/v1/order/**
           filters:
             - StripPrefix=3
         - id: delivery
-          uri: http://delivery:8085
+          uri: lb://delivery
           predicates:
             - Path=/api/v1/delivery/**
           filters:
             - StripPrefix=3
         - id: account
-          uri: http://account:8086
+          uri: lb://account
           predicates:
             - Path=/api/v1/account/**
           filters:
             - StripPrefix=2
         - id: frontend
-          uri: http://frontend:8090
+          uri: lb://frontend
           predicates:
             - Path=/frontend/**
           filters:
@@ -59,4 +59,7 @@ eureka:
     service-url:
       defaultZone: http://eureka:8761/eureka/
   instance:
-    hostname: eureka
+    hostname: ${spring.application.name}
+    ip-address: ${spring.application.name}
+    instance-id: ${spring.application.name}:${random.uuid}
+    preferIpAddress: true

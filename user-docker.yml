@@ -5,7 +5,10 @@ eureka:
     service-url:
       defaultZone: http://eureka:8761/eureka/
   instance:
-    hostname: eureka
+    hostname: ${spring.application.name}
+    ip-address: ${spring.application.name}
+    instance-id: ${spring.application.name}:${random.uuid}
+    preferIpAddress: true
 
 spring:
   data:
