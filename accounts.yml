@@ -13,17 +13,12 @@ spring:
       uri: ${MONGO_URI:mongodb://localhost:27017/foodgrid-account}
       repositories:
         enabled: true
-  cloud:
-    stream:
-      function:
-        defination: authentication
-      bindings:
-        authentication-in-0:
-          destination: authentication
-      kafka:
-        binder:
-          brokers:
-            - localhost:9092
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
 
 management:
   endpoints:
