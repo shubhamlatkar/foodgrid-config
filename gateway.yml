@@ -32,7 +32,7 @@ spring:
         - id: frontend
           uri: lb://frontend
           predicates:
-            - Path=/frontend/**
+            - Path=/foodgrid/**
           filters:
             - StripPrefix=1
 
