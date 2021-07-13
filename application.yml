@@ -1,0 +1,24 @@
+endpoint:
+  service: api
+  version: v1
+  authentication:
+    login: login
+    logout: logout
+    signup: signup
+    logoutAll: logmeout
+    autoLogin: autoLogin
+  notification:
+    prefix: notification
+    user: user
+    restaurant: restaurant
+    delivery: delivery
+  user:
+    prefix: user
+  restaurant:
+    prefix: restaurant
+  delivery:
+    prefix: delivery
+  order:
+    prefix: order
+  account:
+    prefix: account
