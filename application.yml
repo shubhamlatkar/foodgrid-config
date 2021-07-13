@@ -3,9 +3,9 @@ endpoint:
   version: v1
   authentication:
     login: login
-    logout: logout
+    logout: logmeout
     signup: signup
-    logoutAll: logmeout
+    logoutAll: logoutall
     autoLogin: autoLogin
   notification:
     prefix: notification
