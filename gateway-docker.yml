@@ -44,11 +44,11 @@ spring:
           predicates:
             - Path=/api/v1/account/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=3
         - id: frontend
           uri: lb://frontend
           predicates:
-            - Path=/foodgrid/**
+            - Path=/foodgrid/**, /
           filters:
             - StripPrefix=1
 

@@ -16,6 +16,8 @@ spring:
       uri: mongodb://database:27017/foodgrid-user
       repositories:
         enabled: true
+  jms:
+    pub-sub-domain: true
   activemq:
     broker-url: tcp://activemq:61616
     user: admin
