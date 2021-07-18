@@ -40,7 +40,7 @@ spring:
         - id: accounts
           uri: lb://accounts
           predicates:
-            - Path=/account/**
+            - Path=/accounts/**
           filters:
             - StripPrefix=1
 

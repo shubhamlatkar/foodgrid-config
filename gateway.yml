@@ -28,7 +28,7 @@ spring:
         - id: accounts
           uri: lb://accounts
           predicates:
-            - Path=/account/**
+            - Path=/accounts/**
 
 eureka:
   client:
