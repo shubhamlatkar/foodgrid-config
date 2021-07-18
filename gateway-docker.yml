@@ -10,45 +10,37 @@ spring:
         - id: user
           uri: lb://user
           predicates:
-            - Path=/api/v1/user/**
+            - Path=/user/**, /
           filters:
-            - StripPrefix=3
+            - StripPrefix=1
         - id: restaurant
           uri: lb://restaurant
           predicates:
-            - Path=/api/v1/restaurant/**
+            - Path=/restaurant/**
           filters:
-            - StripPrefix=3
-            - RemoveRequestHeader=Cookie
+            - StripPrefix=1
         - id: notification
           uri: lb://notification
           predicates:
-            - Path=/api/v1/notification/**
+            - Path=/notification/**
           filters:
-            - StripPrefix=3
-            - RemoveRequestHeader=Cookie
+            - StripPrefix=1
         - id: order
           uri: lb://order
           predicates:
-            - Path=/api/v1/order/**
+            - Path=/order/**
           filters:
-            - StripPrefix=3
+            - StripPrefix=1
         - id: delivery
           uri: lb://delivery
           predicates:
-            - Path=/api/v1/delivery/**
+            - Path=/delivery/**
           filters:
-            - StripPrefix=3
-        - id: account
-          uri: lb://account
+            - StripPrefix=1
+        - id: accounts
+          uri: lb://accounts
           predicates:
-            - Path=/api/v1/account/**
-          filters:
-            - StripPrefix=3
-        - id: frontend
-          uri: lb://frontend
-          predicates:
-            - Path=/foodgrid/**, /
+            - Path=/account/**
           filters:
             - StripPrefix=1
 

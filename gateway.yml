@@ -25,16 +25,10 @@ spring:
           uri: lb://delivery
           predicates:
             - Path=/delivery/**
-        - id: account
-          uri: lb://account
+        - id: accounts
+          uri: lb://accounts
           predicates:
             - Path=/account/**
-        - id: frontend
-          uri: lb://frontend
-          predicates:
-            - Path=/foodgrid/**
-          filters:
-            - StripPrefix=1
 
 eureka:
   client:
