@@ -1,3 +1,6 @@
+event:
+  authentication: AUTHENTICATION
+
 endpoint:
   service: api
   version: v1
