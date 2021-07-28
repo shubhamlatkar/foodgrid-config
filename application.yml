@@ -1,5 +1,7 @@
 event:
   authentication: AUTHENTICATION
+  user:
+    address: USER-ADDRESS
 
 endpoint:
   service: api
@@ -17,6 +19,7 @@ endpoint:
     delivery: delivery
   user:
     prefix: user
+    address: address
   restaurant:
     prefix: restaurant
   delivery:
