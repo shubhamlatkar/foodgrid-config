@@ -2,6 +2,8 @@ event:
   authentication: AUTHENTICATION
   user:
     address: USER-ADDRESS
+  restaurant:
+    menu: RESTAURANT-MENU
 
 endpoint:
   service: api
@@ -12,6 +14,7 @@ endpoint:
     signup: signup
     logoutAll: logoutall
     autoLogin: autoLogin
+    delete: delete
   notification:
     prefix: notification
     user: user
@@ -22,6 +25,8 @@ endpoint:
     address: address
   restaurant:
     prefix: restaurant
+    menu: menu
+    item: item
   delivery:
     prefix: delivery
   order:
