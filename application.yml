@@ -8,6 +8,8 @@ event:
 endpoint:
   service: api
   version: v1
+  public: public
+  short: short
   authentication:
     login: login
     logout: logmeout
@@ -23,6 +25,9 @@ endpoint:
   user:
     prefix: user
     address: address
+    cart: cart
+    item: item
+    remove: remove
   restaurant:
     prefix: restaurant
     menu: menu
